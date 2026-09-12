@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ddli5ehe8bewb"]
+
+[ext_resource type="Texture2D" uid="uid://bxs7tunk7tfac" path="res://cardc.png" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://blhcm3jhel3mh" path="res://card.gd" id="2_q5obu"]
+[ext_resource type="FontFile" uid="uid://dsnrxt6vb414m" path="res://InterTight-VariableFont_wght.ttf" id="3_e484p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwlhv"]
+size = Vector2(157.2727, 218.18176)
+
+[sub_resource type="Theme" id="Theme_kikvd"]
+default_font = ExtResource("3_e484p")
+default_font_size = 45
+
+[node name="Card" type="Sprite2D" unique_id=595034049]
+position = Vector2(109.99999, 142)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_kikvd")
+script = ExtResource("2_q5obu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=197323992]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2135507109]
+position = Vector2(-2.2727127, -0.90911865)
+shape = SubResource("RectangleShape2D_vwlhv")
+
+[node name="Number" type="RichTextLabel" parent="." unique_id=1507703614]
+offset_left = -34.54545
+offset_top = -41.81818
+offset_right = 29.09092
+offset_bottom = 29.999996
+mouse_filter = 1
+theme = SubResource("Theme_kikvd")
+theme_override_colors/default_color = Color(1, 0.972549, 0.8627451, 1)
+text = "19
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
