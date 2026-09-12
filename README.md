@@ -4,7 +4,7 @@ A 10-card pyramid TriPeaks variant built in Godot. Clear the pyramid by playing 
 
 ## Screenshot
 
-![Gameplay](screenshot.png)
+![Gameplay](Screenshot 2026-09-12 105735.png)
 <!-- Add a gameplay capture as `screenshot.png` in the project root -->
 
 ## How to Play
